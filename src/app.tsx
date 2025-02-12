@@ -1,8 +1,18 @@
+import { NavLink, Outlet } from "react-router-dom";
+import { Mails } from "./pages/mails";
+import { Newsletter } from "./pages/newsletter";
+
 export function App() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-teal-950">
-      <span className="animate-spin text-[14em]">🦭</span>
+    <div className="">
+      <NavLink to={"/Mails"}>
+        <Mails />
+      </NavLink>{" "}
+      |
+      <NavLink to={"/Newsletter"}>
+        <Newsletter />
+      </NavLink>
+      <Outlet />
     </div>
   );
 }
-
